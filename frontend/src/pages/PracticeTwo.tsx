@@ -35,44 +35,42 @@ const PracticeTwo = (): ReactElement => {
         3. Add functionalities in index.js
       </div>
       {/* Just ignore this junk */}
-      <form>
-        <label>
-          Name:
-          <input type="text" name="name" onChange={
-            (e) => setName(e.target.value)
-          }
-          />
-        </label>
-        <br />
-        <label>
-          role:
-          <input type="text" name="role" onChange={
-            (e) => setRole(e.target.value)} />
-        </label>
-        <br />
-        <label>
-          age:
-          <input type="text" name="age" onChange={
-            (e) => setAge(e.target.value)}/>
-        </label>
-        <br />
-        <label>
-          team:
-          <input type="text" name="team" onChange={
-            (e) => setTeam(e.target.value)}/>
-        </label>
-        <br />
-        <input type="submit" value="Submit" 
-        disabled={!name || !age || !role || !team}
-        onClick={() => {
-          // TODO HERE:
-          // UPDATE SERVICE ENDPOINT HERE
-          // TEMPLATE: services.<your_endpoint>.
-          // then.((res) => {...})
-          console.log("SET STUFF");
-        }}
+      <label>
+        Name:
+        <input type="text" name="name" onChange={
+          (e) => setName(e.target.value)
+        }
         />
-      </form>
+      </label>
+      <br />
+      <label>
+        role:
+        <input type="text" name="role" onChange={
+          (e) => setRole(e.target.value)} />
+      </label>
+      <br />
+      <label>
+        age:
+        <input type="text" name="age" onChange={
+          (e) => setAge(e.target.value)}/>
+      </label>
+      <br />
+      <label>
+        team:
+        <input type="text" name="team" onChange={
+          (e) => setTeam(e.target.value)}/>
+      </label>
+      <br />
+      <input type="submit" value="Submit" 
+      disabled={!name || !age || !role || !team}
+      onClick={() => {
+        // TODO HERE:
+        // UPDATE SERVICE ENDPOINT HERE
+        // TEMPLATE: services.<your_endpoint>.
+        // then.((res) => {...})
+        console.log("SET STUFF");
+      }}
+      />
       {data.map((item: Person) => {
           return <div>
             this person's name is {item.name}, their role is {item.role},

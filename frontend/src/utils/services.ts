@@ -19,7 +19,6 @@ const services = {
   // example: () => get(...)
 
   // Practice 2: add post data endpoint here
-  updateData: (data: Person) => post('/update-data', data),
 };
 
 
